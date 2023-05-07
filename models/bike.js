@@ -46,7 +46,7 @@ const bikesSchema = Schema(
   { versionKey: false, timestamps: false }
 );
 
-const Trip = model("film", bikesSchema); // створюємо модель яка формує колекцію
+const Trip = model("station", bikesSchema); // створюємо модель яка формує колекцію
 
 module.exports = {
   Trip,

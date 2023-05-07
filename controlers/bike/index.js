@@ -1,1 +1,5 @@
-module.exports = {};
+const getBikesInfo = require("./funcGetBikesInfo");
+
+module.exports = {
+  getBikesInfo,
+};
