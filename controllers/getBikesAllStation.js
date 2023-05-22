@@ -1,5 +1,5 @@
 const uniqBy = require("lodash.uniqby");
-const { Trip } = require("../../models/bike");
+const { Trip } = require("../models/bike");
 
 const getBikesAllStation = async (req,res)=> {
 

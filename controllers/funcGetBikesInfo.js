@@ -14,7 +14,7 @@ const funcGetBikesInfo = async ({ query }, res) => {
         skip,
         limit: +limit,
       }),
-      totalPage: await funcGetTotalPage(,+limit),
+      totalPage: await funcGetTotalPage(undefined,+limit),
       currPage: page ?? "1",
     });
   } else {
@@ -24,7 +24,7 @@ const funcGetBikesInfo = async ({ query }, res) => {
         skip,
         limit: +limit,
       }),
-      totalPage: await funcGetTotalPage(,+limit),
+      totalPage: await funcGetTotalPage(undefined,+limit),
       currPage: page ?? "1",
     });
   }

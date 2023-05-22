@@ -1,6 +1,6 @@
 
 
-const funcFindControler = (station)=>
+const funcFindController = (station)=>
 
 !isNaN(+station) ?
  {$or: [
@@ -13,4 +13,4 @@ const funcFindControler = (station)=>
 ]};
 
 
-module.exports = funcFindControler;
+module.exports = funcFindController;

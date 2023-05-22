@@ -1,4 +1,4 @@
-const { Trip } = require("../../models/bike");
+const { Trip } = require("../models/bike");
 const funcGetTotalPage = require("./helpers/funcGetTotalPage");
 
 
@@ -17,7 +17,7 @@ const getBikesFiltered = async (req, res) => {
    
   res.json({
     data: durationTrip,
-    totalPage: await funcGetTotalPage(,+limit),
+    totalPage: await funcGetTotalPage(undefined,+limit),
     currPage: page ?? "1",
     });
 };
@@ -28,9 +28,3 @@ module.exports = getBikesFiltered;
 // опис 
 // сортування зроблено від більшого до меньшого і навпаки
 
-// const popularity =  (await Trip.aggregate([
-//     {$sortByCount: '$DepartureStationId'},
-//     {$skip:skip},
-//     {$limit: +limit},
-// ]));
-//    console.log(popularity);

@@ -1,11 +1,13 @@
 const getBikesInfo = require("./funcGetBikesInfo");
 const getBikesFiltered = require("./getBikesFiltered");
-const getBikesFinded = require('./getBikesFinded')
+const getBikesFunded = require('./getBikesFunded')
 const getBikesAllStation = require('./getBikesAllStation');
+const getStationStatistic = require('./getStationStatistic');
 
 module.exports = {
   getBikesInfo,
   getBikesFiltered,
-  getBikesFinded,
-  getBikesAllStation
+  getBikesFunded,
+  getBikesAllStation,
+  getStationStatistic
 };

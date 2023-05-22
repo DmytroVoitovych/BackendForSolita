@@ -1,4 +1,4 @@
-const { Trip } = require("../../../models/bike");
+const { Trip } = require("../../models/bike");
 
 const funcGetTotalPage = async (obj, limit) =>
   Math.ceil((await Trip.find( obj ?? {})).length / limit).toString() ??

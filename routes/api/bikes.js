@@ -3,9 +3,10 @@ const express = require("express");
 const {
   getBikesInfo,
   getBikesFiltered,
-  getBikesFinded,
-  getBikesAllStation
-} = require("../../controlers/bike");
+  getBikesFunded,
+  getBikesAllStation,
+  getStationStatistic
+} = require("../..//controllers");
 
 const { check } = require("../../utils");
 
@@ -17,6 +18,8 @@ router.get("/allStations", check(getBikesAllStation));
 
 router.get("/filter/:to", check(getBikesFiltered));
 
-router.get("/find/:station", check(getBikesFinded));
+router.get("/find/:station", check(getBikesFunded));
+
+router.get("/statistic/:id", check(getStationStatistic));
 
 module.exports = router;
