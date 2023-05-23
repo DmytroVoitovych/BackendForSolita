@@ -6,7 +6,7 @@ const {
   getBikesFunded,
   getBikesAllStation,
   getStationStatistic
-} = require("../..//controllers");
+} = require("../../controllers");
 
 const { check } = require("../../utils");
 
