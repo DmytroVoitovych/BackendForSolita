@@ -16,7 +16,7 @@ const getBikesFiltered = async (req, res) => {
 ]);
    
   res.json({
-    data: durationTrip,
+    stationInfo: durationTrip,
     totalPage: await funcGetTotalPage(undefined,+limit),
     currPage: page ?? "1",
     });

@@ -3,7 +3,6 @@ const pickBy = require("lodash.pickby");
 const { Trip } = require("../models/bike");
 const aggregateStatistic = require("./helpers/aggregateStatistic");
 
-
 const getStationStatistic = async (req,res)=> {
 
     const {id} = req.params;  
@@ -17,7 +16,6 @@ const getStationStatistic = async (req,res)=> {
   return Object.fromEntries(Object.entries(pickBy(countTrips, e => arrPopular.includes(e))).sort((a,b)=> b[1] - a[1]).slice(0,5));
  }
    
-
    res.json({
     data: await aggregateStatistic(Trip,id),
     topdeparture: await funcGetTop({ DepartureStationId: id },'ReturnStationName'),
